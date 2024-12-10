@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "python-template"
+version = "0.1.0"
+description = ""
+authors = ["Ahmed Mukhtar <ahmed@agenix.ai>"]
+
+[tool.poetry.dependencies]
+python = ">=3.10.0,<3.12"
+uvicorn = "^0.32.0"
+websockets = "^13.1"
+fastapi = "^0.115.2"
+requests = "^2.32.3"
+python-multipart = "^0.0.6"
+pinecone = "^5.1.0"
+pinecone-plugin-assistant = "0.3.0"
+pinecone-client = "^5.0.1"
+
+[tool.pyright]
+useLibraryCodeForTypes = true
+exclude = [".cache"]
+
+[tool.ruff]
+select = ['E', 'W', 'F', 'I', 'B', 'C4', 'ARG', 'SIM']
+ignore = ['W291', 'W292', 'W293']
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
